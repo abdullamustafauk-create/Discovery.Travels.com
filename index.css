@@ -1,0 +1,35 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import { motion } from 'motion/react';
+import Navbar from './components/layout/Navbar';
+import Hero from './components/home/Hero';
+import ServicesGrid from './components/home/ServicesGrid';
+import AboutSection from './components/home/AboutSection';
+import InquiryForm from './components/forms/InquiryForm';
+import Footer from './components/layout/Footer';
+import AIAssistant from './components/home/AIAssistant';
+
+export default function App() {
+  return (
+    <div className="relative min-h-screen">
+      <Navbar />
+      
+      <motion.main
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <Hero />
+        <ServicesGrid />
+        <AboutSection />
+        <InquiryForm />
+      </motion.main>
+
+      <Footer />
+      <AIAssistant />
+    </div>
+  );
+}
